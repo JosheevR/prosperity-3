@@ -54,7 +54,29 @@ class Order:
     def __repr__(self) -> str:
         return "(" + self.symbol + ", " + str(self.price) + ", " + str(self.quantity) + ")"
     
+'''
+class Trading State
+ -> order_depths = {
+                    RAINFOREST_RESIN: class OrderDepth
+                            -> buy_orders = {bid_price_1 : bid_volume_1,
+                                            bid_price_2 : bid_volume_2,
+                                            bid_price_3 : bid_volume_3}
 
+                            -> sell_orders = {ask_price_1 : ask_volume_1,
+                                            ask_price_2 : ask_volume_2,
+                                            ask_price_3 : ask_volume_3}},
+
+
+                    KELP: class OrderDepth
+                            -> buy_orders = {bid_price_1 : bid_volume_1,
+                                            bid_price_2 : bid_volume_2,
+                                            bid_price_3 : bid_volume_3}
+
+                            -> sell_orders = {ask_price_1 : ask_volume_1,
+                                            ask_price_2 : ask_volume_2,
+                                            ask_price_3 : ask_volume_3}
+                    }
+'''
 class OrderDepth:
 
     def __init__(self):
