@@ -5,9 +5,9 @@ from prosperity2bt.file_reader import FileReader
 from typing import Optional
 
 LIMITS = {
-    "AMETHYSTS": 20,
-    "STARFRUIT": 20,
-    "ORCHIDS": 100,
+    "RAINFOREST_RESIN": 50,
+    "SQUID_INK": 50,
+    "KELP": 50,
     "CHOCOLATE": 250,
     "STRAWBERRIES": 350,
     "ROSES": 60,

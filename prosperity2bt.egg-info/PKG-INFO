@@ -1,0 +1,22 @@
+Metadata-Version: 2.4
+Name: prosperity2bt
+Version: 0.0.0
+Summary: Backtester for IMC Prosperity 2 algorithms
+Author-email: Jasper van Merle <jaspervmerle@gmail.com>
+Project-URL: Repository, https://github.com/jmerle/imc-prosperity-2-backtester
+Project-URL: Issues, https://github.com/jmerle/imc-prosperity-2-backtester/issues
+Project-URL: Changelog, https://github.com/jmerle/imc-prosperity-2-backtester/releases
+Keywords: imc,prosperity,backtest,backtester
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Financial and Insurance Industry
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: ipython
+Requires-Dist: jsonpickle
+Requires-Dist: orjson
+Requires-Dist: tqdm
+
+# prosperity-3
