@@ -4,6 +4,7 @@ import string
 import jsonpickle
 import numpy as np
 import math
+from sklearn.neighbors import KNeighborsClassifier
 
 
 class Product:
@@ -84,6 +85,7 @@ class Trader:
                         order_depth.sell_orders[best_ask] += quantity
                         if order_depth.sell_orders[best_ask] == 0:
                             del order_depth.sell_orders[best_ask]
+        knn = KNeighborsClassifier(n_neighbors=5, metric='euclidean')
 
         if len(order_depth.buy_orders) != 0:
             best_bid = max(order_depth.buy_orders.keys())
