@@ -4,8 +4,6 @@ import string
 import jsonpickle
 import numpy as np
 import math
-from sklearn.neighbors import KNeighborsClassifier
-
 
 class Product:
     RAINFOREST_RESIN = "RAINFOREST_RESIN"
@@ -38,8 +36,8 @@ PARAMS = {
         "take_width": 1,
         "clear_width": 0,
         "prevent_adverse": True,
-        "adverse_volume": 15,
-        "reversion_beta": -0.229,
+        "adverse_volume": 10,
+        "reversion_beta": .1,
         "disregard_edge": 1,
         "join_edge": 0,
         "default_edge": 1,
@@ -85,7 +83,6 @@ class Trader:
                         order_depth.sell_orders[best_ask] += quantity
                         if order_depth.sell_orders[best_ask] == 0:
                             del order_depth.sell_orders[best_ask]
-        knn = KNeighborsClassifier(n_neighbors=5, metric='euclidean')
 
         if len(order_depth.buy_orders) != 0:
             best_bid = max(order_depth.buy_orders.keys())
