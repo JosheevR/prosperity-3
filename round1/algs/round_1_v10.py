@@ -325,12 +325,8 @@ class Trader:
             if price < fair_value - disregard_edge
         ]
 
-        if product == Product.SQUID_INK:
-            best_bid_below_fair = min(asks_above_fair) if len(asks_above_fair) > 0 else None
-            best_ask_above_fair = max(bids_below_fair) if len(bids_below_fair) > 0 else None
-        else: 
-            best_ask_above_fair = min(asks_above_fair) if len(asks_above_fair) > 0 else None
-            best_bid_below_fair = max(bids_below_fair) if len(bids_below_fair) > 0 else None
+        best_ask_above_fair = min(asks_above_fair) if len(asks_above_fair) > 0 else None
+        best_bid_below_fair = max(bids_below_fair) if len(bids_below_fair) > 0 else None
 
         ask = round(fair_value + default_edge)
         if best_ask_above_fair != None:
